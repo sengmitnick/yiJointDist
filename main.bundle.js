@@ -17570,11 +17570,11 @@ var SettingService = /** @class */ (function () {
      */
     SettingService.prototype.setTitle = function (title) {
         if (title === void 0) { title = this.title; }
-        if (dd.version !== null) {
-            dd.biz.navigation.setTitle({
-                title: title
-            });
-        }
+        // if (dd.version !== null) {
+        //   dd.biz.navigation.setTitle({
+        //     title : title
+        //   });
+        // }
         this.navTitle = title;
     };
     /**
