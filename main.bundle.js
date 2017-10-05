@@ -17570,11 +17570,11 @@ var SettingService = /** @class */ (function () {
      */
     SettingService.prototype.setTitle = function (title) {
         if (title === void 0) { title = this.title; }
-        // if (dd.version !== null) {
-        //   dd.biz.navigation.setTitle({
-        //     title : title
-        //   });
-        // }
+        if (dd.version !== null) {
+            dd.biz.navigation.setTitle({
+                title: title
+            });
+        }
         this.navTitle = title;
     };
     /**
@@ -17730,7 +17730,7 @@ var AppComponent = /** @class */ (function () {
                 }
             }, 1000);
         }
-        console.log(dd.version);
+        console.log(dd);
     }
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
