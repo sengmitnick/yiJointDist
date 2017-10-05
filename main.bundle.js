@@ -17572,7 +17572,13 @@ var SettingService = /** @class */ (function () {
         if (title === void 0) { title = this.title; }
         // if (dd.version !== null) {
         //   dd.biz.navigation.setTitle({
-        //     title : title
+        //     title : title,
+        //     onSuccess : function(result) {
+        //       console.error(result);
+        //     },
+        //     onFail : function(err) {
+        //       console.error(err);
+        //     }
         //   });
         // }
         this.navTitle = title;
@@ -17730,7 +17736,6 @@ var AppComponent = /** @class */ (function () {
                 }
             }, 1000);
         }
-        console.log(dd);
     }
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
@@ -18284,7 +18289,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/page-home/page-home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet></router-outlet>\n<app-tab-bar [tabs]=\"tabs\"></app-tab-bar>"
+module.exports = "<router-outlet></router-outlet>\n<app-tab-bar (click)=\"onClick()\" [tabs]=\"tabs\"></app-tab-bar>"
 
 /***/ }),
 
@@ -18312,6 +18317,11 @@ var PageHomeComponent = /** @class */ (function () {
         this.tabs = settings.getTabBarNames();
     }
     PageHomeComponent.prototype.ngOnInit = function () {
+    };
+    PageHomeComponent.prototype.onClick = function () {
+        dd.device.notification.vibrate({
+            duration: 300
+        });
     };
     PageHomeComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
@@ -18568,6 +18578,7 @@ var PageUserComponent = /** @class */ (function () {
         this.iconReg = iconReg;
         this.user = settings.getUser();
         this.menus = settings.getUserMenus();
+        console.error(dd.version);
     }
     PageUserComponent.prototype.ngOnInit = function () {
         if (!this.user.isAvatar) {
