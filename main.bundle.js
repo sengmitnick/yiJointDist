@@ -313,7 +313,7 @@ exports = module.exports = __webpack_require__("../../../../_css-loader@0.28.7@c
 
 
 // module
-exports.push([module.i, ".nav-bar{\n    text-align: center;\n    font-size: large;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.navbar-left{\n    width: 1.66rem;\n    height: 1.66rem;\n}\n.navbar-text{\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}", ""]);
+exports.push([module.i, ".nav-bar{\n    text-align: center;\n    font-size: large;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    background-color: white;\n}\n.navbar-left{\n    width: 1.66rem;\n    height: 1.66rem;\n}\n.navbar-text{\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}", ""]);
 
 // exports
 
@@ -490,7 +490,7 @@ exports = module.exports = __webpack_require__("../../../../_css-loader@0.28.7@c
 
 
 // module
-exports.push([module.i, ".segmented-container{\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    margin-top: 0.66rem;\n}\n.btn{\n    padding-left: 3rem;\n    padding-right: 3rem;\n}", ""]);
+exports.push([module.i, ".segmented-container{\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    margin-top: 1.26rem;\n}\n.btn{\n    padding-left: 3rem;\n    padding-right: 3rem;\n}", ""]);
 
 // exports
 
@@ -544,6 +544,71 @@ var SegmentedControlComponent = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=segmented-control.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/page-home/components/sms-list/sms-list.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../_css-loader@0.28.7@css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".list-group{\n    margin-top: 1.26rem;\n    padding: 0 1.66rem;\n    padding-bottom: 2.74rem;\n    background-color: white;\n}\n.sms-list-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    min-height: 3.66rem;\n    overflow: hidden;\n    transition: background-color 200ms;\n    background-color: white;\n}\n.sms-list-container:hover, .active{\n    background-color: #f0f0f0;\n}\n.sms-list-container{\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    padding-left: 1.26rem;\n}\n.sms-list-thumb{\n    margin-right: 1.26rem;\n    height: 1.66rem;\n}\n.sms-list-line{\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    padding-right: 1.26rem;\n    border-bottom: 0.06rem solid #f5f5f9;\n}\n.icon{\n    width: 1.66rem;\n    height: 1.66rem;\n}\n.sms-list-title{\n    color: #000000;\n    margin: 0.66rem 0;\n    font-size: 1.26rem;\n}\n.sms-list-content{\n    color: #aba7ab;\n    font-size: 0.66rem;\n    margin-left: 0.26rem;\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/page-home/components/sms-list/sms-list.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"list-group\">\n    <div *ngFor=\"let item of list\" class=\"sms-list-container\">\n      <div class=\"sms-list-thumb\">\n          <span class=\"glyphicon glyphicon-file\" style=\"color: red;\" aria-hidden=\"true\"></span>\n      </div>\n      <div class=\"sms-list-line\">\n          <p class=\"sms-list-title\">{{ item.title }}</p>\n          <p class=\"sms-list-content\">{{ item.content }}</p>\n      </div>\n    </div>\n  </div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/page-home/components/sms-list/sms-list.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SmsListComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../../_@angular_core@4.4.4@@angular/core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SmsListComponent = /** @class */ (function () {
+    function SmsListComponent() {
+    }
+    SmsListComponent.prototype.ngOnInit = function () {
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+        __metadata("design:type", Array)
+    ], SmsListComponent.prototype, "list", void 0);
+    SmsListComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-sms-list',
+            template: __webpack_require__("../../../../../src/app/pages/page-home/components/sms-list/sms-list.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/page-home/components/sms-list/sms-list.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SmsListComponent);
+    return SmsListComponent;
+}());
+
+//# sourceMappingURL=sms-list.component.js.map
 
 /***/ }),
 
@@ -639,12 +704,14 @@ var HomeRoutingModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_page_sms_pages_page_notice_page_notice_component__ = __webpack_require__("../../../../../src/app/pages/page-home/pages/page-sms/pages/page-notice/page-notice.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_segmented_control_segmented_control_component__ = __webpack_require__("../../../../../src/app/pages/page-home/components/segmented-control/segmented-control.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_menu_list_menu_list_component__ = __webpack_require__("../../../../../src/app/components/menu-list/menu-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_sms_list_sms_list_component__ = __webpack_require__("../../../../../src/app/pages/page-home/components/sms-list/sms-list.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -681,7 +748,8 @@ var HomeModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_10__pages_page_sms_pages_page_upcoming_page_upcoming_component__["a" /* PageUpcomingComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__pages_page_sms_pages_page_notice_page_notice_component__["a" /* PageNoticeComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__components_segmented_control_segmented_control_component__["a" /* SegmentedControlComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__components_menu_list_menu_list_component__["a" /* MenuListComponent */]
+                __WEBPACK_IMPORTED_MODULE_13__components_menu_list_menu_list_component__["a" /* MenuListComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__components_sms_list_sms_list_component__["a" /* SmsListComponent */]
             ]
         })
     ], HomeModule);
@@ -738,7 +806,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var PageHomeComponent = /** @class */ (function () {
     function PageHomeComponent(settings) {
         this.settings = settings;
-        this.tabs = settings.getTabBarNames();
+        this.tabs = settings.getTabList();
     }
     PageHomeComponent.prototype.ngOnInit = function () {
     };
@@ -808,8 +876,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var PageSmsComponent = /** @class */ (function () {
     function PageSmsComponent(settings) {
+        var _this = this;
         this.settings = settings;
-        this.segmenteds = settings.getSmsSegmenteds();
+        this.segmenteds = settings.getsmsSegmentedList(function (list) {
+            _this.segmenteds = list;
+        });
     }
     PageSmsComponent.prototype.ngOnInit = function () {
     };
@@ -850,7 +921,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/page-home/pages/page-sms/pages/page-notice/page-notice.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  page-notice works!\n</p>\n"
+module.exports = "<app-sms-list [list]=\"list\" ></app-sms-list>"
 
 /***/ }),
 
@@ -874,7 +945,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var PageNoticeComponent = /** @class */ (function () {
     function PageNoticeComponent(notice) {
+        var _this = this;
         this.notice = notice;
+        this.list = [];
+        notice.getList(function (list) {
+            _this.list = list;
+        });
     }
     PageNoticeComponent.prototype.ngOnInit = function () {
     };
@@ -902,7 +978,7 @@ exports = module.exports = __webpack_require__("../../../../_css-loader@0.28.7@c
 
 
 // module
-exports.push([module.i, ".list-group{\n    margin-top: 1.26rem;\n    padding: 0 1.66rem;\n    padding-bottom: 2.74rem;\n    background-color: white;\n}\n.sms-list-container, .menu-list-line{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    min-height: 3.66rem;\n    overflow: hidden;\n    transition: background-color 200ms;\n    background-color: white;\n}\n.sms-list-container:hover, .menu-list-line:hover, .active{\n    background-color: #f5f5f9;\n}\n.sms-list-container{\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    padding-left: 1.26rem;\n}\n.sms-list-thumb{\n    margin-right: 1.26rem;\n    height: 1.66rem;\n}\n.sms-list-line{\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    padding-right: 1.26rem;\n    border-bottom: 0.06rem solid #f5f5f9;\n}\n.icon{\n    width: 1.66rem;\n    height: 1.66rem;\n}\n.sms-list-title{\n    color: #000000;\n    margin: 0.66rem 0;\n}\n.sms-list-content{\n    color: #aba7ab;\n    font-size: 0.66rem;\n}", ""]);
+exports.push([module.i, "", ""]);
 
 // exports
 
@@ -915,7 +991,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/page-home/pages/page-sms/pages/page-upcoming/page-upcoming.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"list-group\">\n  <div *ngFor=\"let item of list\" class=\"sms-list-container\">\n    <div class=\"sms-list-thumb\">\n        <span class=\"glyphicon glyphicon-file\" style=\"color: red;\" aria-hidden=\"true\"></span>\n    </div>\n    <div class=\"sms-list-line\">\n        <p class=\"sms-list-title\">{{ item.title }}</p>\n        <p class=\"sms-list-content\">{{ item.content }}</p>\n    </div>\n  </div>\n</div>"
+module.exports = "<app-sms-list [list]=\"list\" ></app-sms-list>"
 
 /***/ }),
 
@@ -985,7 +1061,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/page-home/pages/page-user/page-user.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"user-container container-fluid\">\n  <img *ngIf=\"user.isAvatar; else elseBlock\" src=\"{{ user.avatar }}\" alt=\"avatar\" class=\"avatar\">\n  <ng-template #elseBlock>\n      <svg-icon class=\"avatar\" src=\"assets/icon/avatar/{{ user.avatar }}.svg\" ></svg-icon>\n  </ng-template>\n  <p>您好，{{user.name}}</p>\n</div>\n<app-menu-list [list]=\"menus\" (click)=\"onClick($event)\"></app-menu-list>"
+module.exports = "<div class=\"user-container container-fluid\">\n  <img *ngIf=\"user.isAvatar; else elseBlock\" src=\"{{ user.avatar }}\" alt=\"avatar\" class=\"avatar\">\n  <ng-template #elseBlock>\n      <svg-icon class=\"avatar\" src=\"assets/icon/avatar/{{ user.avatar }}.svg\" ></svg-icon>\n  </ng-template>\n  <p>您好，{{user.nickName}}</p>\n</div>\n<app-menu-list [list]=\"menus\" (click)=\"onClick($event)\"></app-menu-list>"
 
 /***/ }),
 
@@ -1014,13 +1090,13 @@ var PageUserComponent = /** @class */ (function () {
         this.settings = settings;
         this.iconReg = iconReg;
         this.user = settings.getUser();
-        this.menus = settings.getUserMenus();
-    }
-    PageUserComponent.prototype.ngOnInit = function () {
+        this.menus = settings.getuserMenuList();
         if (!this.user.isAvatar) {
             var svgPath = 'assets/icon/avatar/' + this.user.avatar + '.svg';
             this.iconReg.loadSvg(svgPath);
         }
+    }
+    PageUserComponent.prototype.ngOnInit = function () {
     };
     PageUserComponent.prototype.ngOnDestroy = function () {
         if (!this.user.isAvatar) {
@@ -1055,7 +1131,7 @@ exports = module.exports = __webpack_require__("../../../../_css-loader@0.28.7@c
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".work-list-group{\n    margin-bottom: 4rem;\n}\n.work-list-container{\n    background-color: white;\n    margin: 1.66rem 0;\n    padding-top: 0.66rem;\n}\n\n.work-list-head{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    font-size: 1.66rem;\n}\n.work-list-thumb{\n    margin-right: 0.66rem;\n    height: 1.66rem;\n    font-size: 1.66rem;\n}\n.work-list-content-thumb{\n    margin-right: 0.66rem;\n    height: 1.26rem;\n    font-size: 1.26rem;\n}\n.icon{\n    width: 1.66rem;\n    height: 1.66rem;\n}\n.work-list-content{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    margin-left: 2.32rem;\n    font-size: 1.26rem;\n}\n.work-list-line{\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    min-height: 2.66rem;\n    border-bottom: 0.06rem solid #f5f5f9;\n}\n.work-list-title:hover, .work-list-plus:hover{\n    background-color: #f0f0f0;\n}\n.work-list-plus{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    min-height: 2.66rem;\n    padding: 0 1.26rem;\n}\n.work-list-title{\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    min-height: 2.66rem;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.work-list-title p{\n    margin: 0;\n}", ""]);
 
 // exports
 
@@ -1068,7 +1144,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/page-home/pages/page-work/page-work.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  page-work works!\n</p>\n"
+module.exports = "<!-- <div class=\"container-fluid work-list\">\n  <div *ngFor=\"let items of list\" class=\"list-group\">\n    <div class=\"work-list-title\">\n      <svg-icon class=\"icon\" [style.fill]=\"itemss.color\" src=\"assets/icon/{{ items.icon }}.svg\" ></svg-icon>\n      <p>{{ items.title }}</p>\n    </div>\n    <div *ngFor=\"let item of items.list\" class=\"work-list-container\">\n      <div class=\"work-list-thumb\">\n          <span class=\"glyphicon glyphicon-triangle-right\" [style.color]=\"itemss.color\" aria-hidden=\"true\"></span>\n      </div>\n      <div class=\"work-list-line\">\n          <p class=\"work-list-title\">{{ item.title }}</p>\n      </div>\n    </div>\n  </div>\n</div> -->\n<div class=\"work-list-group\">\n  <div *ngFor=\"let items of list\" class=\"container-fluid work-list-container\">\n    <div class=\"work-list-head\">\n      <div class=\"work-list-thumb\">\n        <svg-icon class=\"icon\" [style.fill]=\"items.color\" src=\"assets/icon/{{ items.icon }}.svg\" ></svg-icon>\n      </div>\n      <p>{{ items.title }}</p>\n    </div>\n\n    <div *ngFor=\"let item of items.list\" class=\"work-list-content\" >\n      <div class=\"work-list-content-thumb\">\n          <span class=\"glyphicon glyphicon-triangle-right\" [style.color]=\"items.color\" aria-hidden=\"true\"></span>\n      </div>\n      <div class=\"work-list-line\" [routerLink]=\"item.url\">\n        <div class=\"work-list-title\">\n            <p>{{ item.title }}</p>\n        </div>\n        <div class=\"work-list-plus\" [routerLink]=\"item.addUrl\">\n            <span class=\"glyphicon glyphicon-plus\" aria-hidden=\"true\" [style.color]=\"'#a5a5a5'\"></span>\n        </div>\n      </div>\n      \n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1078,6 +1154,8 @@ module.exports = "<p>\n  page-work works!\n</p>\n"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageWorkComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../../_@angular_core@4.4.4@@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_setting_setting_service__ = __webpack_require__("../../../../../src/app/services/setting/setting.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular_svg_icon__ = __webpack_require__("../../../../_angular-svg-icon@4.2.5@angular-svg-icon/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1088,10 +1166,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var PageWorkComponent = /** @class */ (function () {
-    function PageWorkComponent() {
+    function PageWorkComponent(settings, iconReg) {
+        this.settings = settings;
+        this.iconReg = iconReg;
+        this.list = settings.getWorkMenuList();
+        for (var i = 0; i < this.list.length; i++) {
+            var svgPath = 'assets/icon/' + this.list[i].icon + '.svg';
+            this.iconReg.loadSvg(svgPath);
+        }
     }
     PageWorkComponent.prototype.ngOnInit = function () {
+    };
+    PageWorkComponent.prototype.ngOnDestroy = function () {
+        for (var i = 0; i < this.list.length; i++) {
+            var svgPath = 'assets/icon/' + this.list[i].icon + '.svg';
+            this.iconReg.loadSvg(svgPath);
+        }
     };
     PageWorkComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
@@ -1099,9 +1192,10 @@ var PageWorkComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/pages/page-home/pages/page-work/page-work.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/page-home/pages/page-work/page-work.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_setting_setting_service__["a" /* SettingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_setting_setting_service__["a" /* SettingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_angular_svg_icon__["b" /* SvgIconRegistryService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular_svg_icon__["b" /* SvgIconRegistryService */]) === "function" && _b || Object])
     ], PageWorkComponent);
     return PageWorkComponent;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=page-work.component.js.map
@@ -1116,7 +1210,7 @@ exports = module.exports = __webpack_require__("../../../../_css-loader@0.28.7@c
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".not-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    fill: #eb9316;\n}\n.icon{\n    width: 80%;\n}", ""]);
 
 // exports
 
@@ -1129,7 +1223,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/page-not-found/page-not-found.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  page-not-found works!\n</p>\n"
+module.exports = "<div class=\"container-fluid not-container\">\n    <svg-icon class=\"icon\" src=\"assets/icon/404.svg\" ></svg-icon>\n    <p>很抱歉 &gt;_&lt; </p>\n    <p>没有找到你要访问的页面！</p>\n    <button type=\"button\" class=\"btn btn-warning\" (click)=\"onClick()\" >返回首页</button>\n</div>"
 
 /***/ }),
 
@@ -1139,6 +1233,7 @@ module.exports = "<p>\n  page-not-found works!\n</p>\n"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageNotFoundComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../../_@angular_core@4.4.4@@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../../_@angular_router@4.4.4@@angular/router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1149,10 +1244,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var PageNotFoundComponent = /** @class */ (function () {
-    function PageNotFoundComponent() {
+    function PageNotFoundComponent(route, router) {
+        this.route = route;
+        this.router = router;
     }
     PageNotFoundComponent.prototype.ngOnInit = function () {
+    };
+    PageNotFoundComponent.prototype.onClick = function () {
+        this.router.navigate(['/'], { relativeTo: this.route });
     };
     PageNotFoundComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
@@ -1160,9 +1261,10 @@ var PageNotFoundComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/pages/page-not-found/page-not-found.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/page-not-found/page-not-found.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object])
     ], PageNotFoundComponent);
     return PageNotFoundComponent;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=page-not-found.component.js.map
@@ -1533,6 +1635,8 @@ var UserModule = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../../_@angular_core@4.4.4@@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_sms_upcoming_sms_upcoming_service__ = __webpack_require__("../../../../../src/app/services/sms-upcoming/sms-upcoming.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_sms_notice_sms_notice_service__ = __webpack_require__("../../../../../src/app/services/sms-notice/sms-notice.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1543,26 +1647,48 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var SettingService = /** @class */ (function () {
-    function SettingService() {
+    function SettingService(upcoming, notice) {
+        this.upcoming = upcoming;
+        this.notice = notice;
         this.title = this.navTitle = '易协同1.0';
-        this.tabs = [
+        this.tabList = [
             { title: '消息', icon: 'sms', url: '/home/sms' },
             { title: '工作台', icon: 'work', url: '/home/work' },
             { title: '我', icon: 'user', url: '/home/user' }
         ];
-        this.userMenus = [
+        this.userMenuList = [
             { title: '个人信息', icon: 'info', url: '/user/info', color: '#0099CC' },
             { title: '设置', icon: 'setting', url: '/user/setting', color: '#0099CC' },
             { title: '关于', icon: 'about', url: '/user/about', color: '#0099CC' }
         ];
-        this.smsSegmenteds = [
-            { name: '待办', badge: 4, url: '/home/sms/upcoming' },
-            { name: '通知', badge: 6, url: '/home/sms/notice' }
+        this.smsSegmentedList = [
+            { name: '待办', badge: 0, url: '/home/sms/upcoming' },
+            { name: '通知', badge: 0, url: '/home/sms/notice' }
+        ];
+        this.workMenuList = [
+            { title: '现场签证', icon: 'onsite', color: '#d4237a', list: [
+                    { title: '签证申报', url: '/work/declare/onsite', addUrl: '/work/add/onsite' },
+                    { title: '完工确认', url: '/work/confirm/onsite', addUrl: '/work/add/onsite' }
+                ] },
+            { title: '设计变更', icon: 'design', color: '#1296db', list: [
+                    { title: '变更申报', url: '/work/declare/design', addUrl: '/work/add/design' },
+                    { title: '完工确认', url: '/work/confirm/design', addUrl: '/work/add/design' }
+                ] },
+            { title: '付款管理', icon: 'payment', color: '#259B24', list: [
+                    { title: '产值申报', url: '/work/declare/payment', addUrl: '/work/add/payment' },
+                    { title: '付款申请', url: '/work/confirm/payment', addUrl: '/work/add/payment' }
+                ] },
+            { title: '合同管理', icon: 'contract', color: '#ff9800', list: [
+                    { title: '合同台账', url: '/work/declare/contract', addUrl: '/work/add/contract' },
+                    { title: '合同结算', url: '/work/confirm/contract', addUrl: '/work/add/contract' }
+                ] }
         ];
         this.currentUser = {
             id: 0,
-            name: '敖 博',
+            nickName: '敖 博',
             isAvatar: false,
             avatar: 'avatar'
         };
@@ -1601,20 +1727,39 @@ var SettingService = /** @class */ (function () {
     /**
      * 获取底部导航栏菜单列表
      */
-    SettingService.prototype.getTabBarNames = function () {
-        return this.tabs;
+    SettingService.prototype.getTabList = function () {
+        return this.tabList;
+    };
+    /**
+     * 获取工作台菜单列表
+     */
+    SettingService.prototype.getWorkMenuList = function () {
+        return this.workMenuList;
     };
     /**
      * 获取‘我’个人菜单列表
      */
-    SettingService.prototype.getUserMenus = function () {
-        return this.userMenus;
+    SettingService.prototype.getuserMenuList = function () {
+        return this.userMenuList;
     };
     /**
      * 获取消息页面分段器列表
+     * @param callback 回调函数，返回 SmsSegmented[] 类型
      */
-    SettingService.prototype.getSmsSegmenteds = function () {
-        return this.smsSegmenteds;
+    SettingService.prototype.getsmsSegmentedList = function (callback) {
+        var _this = this;
+        if (callback !== null) {
+            this.upcoming.getList(function (list) {
+                _this.notice.getList(function (nlist) {
+                    _this.smsSegmentedList = [
+                        { name: '待办', badge: list.length, url: '/home/sms/upcoming' },
+                        { name: '通知', badge: nlist.length, url: '/home/sms/notice' }
+                    ];
+                    callback(_this.smsSegmentedList);
+                });
+            });
+        }
+        return this.smsSegmentedList;
     };
     /**
      * 获取当前登录用户信息
@@ -1624,9 +1769,10 @@ var SettingService = /** @class */ (function () {
     };
     SettingService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_sms_upcoming_sms_upcoming_service__["a" /* SmsUpcomingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_sms_upcoming_sms_upcoming_service__["a" /* SmsUpcomingService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_sms_notice_sms_notice_service__["a" /* SmsNoticeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_sms_notice_sms_notice_service__["a" /* SmsNoticeService */]) === "function" && _b || Object])
     ], SettingService);
     return SettingService;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=setting.service.js.map
