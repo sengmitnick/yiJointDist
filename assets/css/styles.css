@@ -12,3 +12,9 @@ p{
 .badge{
     font-size: 0.88rem;
 }
+.icon {
+    width: 1.66rem; height: 1.66rem;
+    vertical-align: -0.15rem;
+    fill: currentColor;
+    overflow: hidden;
+ }

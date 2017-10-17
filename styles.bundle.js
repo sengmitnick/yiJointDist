@@ -112,7 +112,7 @@ exports = module.exports = __webpack_require__("../../../../_css-loader@0.28.7@c
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\nbody {\n    background-color: #f5f5f9;\n}\np{\n    font-size: 1.26rem;\n    margin: 0;\n}\n.btn{\n    font-size: 1.26rem;\n}\n.badge{\n    font-size: 0.88rem;\n}", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\nbody {\n    background-color: #f5f5f9;\n}\np{\n    font-size: 1.26rem;\n    margin: 0;\n}\n.btn{\n    font-size: 1.26rem;\n}\n.badge{\n    font-size: 0.88rem;\n}\n.icon {\n    width: 1.66rem; height: 1.66rem;\n    vertical-align: -0.15rem;\n    fill: currentColor;\n    overflow: hidden;\n }", ""]);
 
 // exports
 

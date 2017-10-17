@@ -1,4 +1,4 @@
-declare var dd: DingtalkModule;
+declare var dd: any;
 
 interface DingtalkModule {
     /**
@@ -18,4 +18,8 @@ interface DingtalkModule {
     preRelease: any;
     channel: any;
     service; any;
+    config(param: () => void): void;
 }
+// interface ForEachCallback {
+//     (keyId: any, status: MediaKeyStatus): void;
+// }
